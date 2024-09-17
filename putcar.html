@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Put Car for Rent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container" id="login-section">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button class="button" onclick="login()">Login</button>
+        <p id="login-error" style="color:red; display:none;">Invalid credentials! Try again.</p>
+    </div>
+
+    <div class="car-form-container" id="car-form-section" style="display:none;">
+        <h2>Enter Car Details</h2>
+        <form id="car-form">
+            <input type="text" id="car-name" placeholder="Car Name" required><br>
+            <input type="file" id="car-photo" accept="image/*" required><br>
+            <input type="number" id="car-amount" placeholder="Rent Amount" required><br>
+            <button type="submit" class="button">Submit</button>
+        </form>
+        <p id="submit-success" style="color:green; display:none;">Car details submitted successfully!</p>
+
+        <!-- Section to display the uploaded car -->
+        <div id="uploaded-car" style="margin-top: 30px;">
+            <h3>Your Uploaded Cars</h3>
+            <div id="car-display">
+                <!-- Uploaded cars will be displayed here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
